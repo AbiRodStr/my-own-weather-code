@@ -14,15 +14,22 @@
 <form class="search-form">
     <input type="search" placeholder="Enter a city..." required class="search-form-input"/>
     <input type=" submit" value="Search" class="search-form-submit"/>
-    </header>
+  
+ </header>
     <main>
-    <div><h1>Paris</h1>
-    <p>
-        Wednesday 16:06, sunny 
-        <br />
-        Humidity: 66%, wind 3.13 km/h
-    </p></div>
-   <div>⛅ 12ºC</div> 
+    <p class="current-date-time">
+Wednesday 16:06
+<div class="weather-app-data">
+    <span class="weather-app-city">Paris</span>          
+                         <span class= "current-temperature">
+                <div class="emoji">⛅</div> 
+        <div class="temperature">12</div>
+        <div class="temperature-unit">ºC</div> 
+    </span>
+</div>
+ <p class="weather-app-details">
+    Sunny, Humidity: <strong>66%</strong> wind <strong>3.13</strong> km/h
+    </p>
 </main>
     <footer>
       Coded by
@@ -33,6 +40,7 @@
       >
       and hosted on
       <a href="https://abis-weather.netlify.app/" target="_blank"> Netlify.</a>
-    </footer></div>
+    </footer>
+</div>
   </body>
 </html>
