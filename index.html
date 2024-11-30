@@ -11,8 +11,8 @@
   </head>
   <body>
    <div class="weather-information"> <header>
-<form class="search-form">
-    <input type="search" placeholder="Enter a city..." required class="search-form-input"/>
+<form class="search-form" id="searchForm">
+    <input type="search" placeholder="Enter a city..." required id="searchFormInput" class="search-form-input"/>
     <input type=" submit" value="Search" class="search-form-submit"/>
   
  </header>
@@ -21,7 +21,7 @@
 Wednesday 16:06
 </p>
 <span class="weather-app-data">
-    <span class="weather-app-city">Paris</span>         
+    <span class="weather-app-city" id="city">Paris</span>         
     <span class= "current-temperature">
 <div class="emoji">⛅</div> 
 <div class="temperature">12</div>
@@ -43,5 +43,6 @@ Wednesday 16:06
       <a href="https://abis-weather.netlify.app/" target="_blank"> Netlify.</a>
     </footer>
 </div>
-  </body>
+<script src="src/script.js"> </script> 
+</body>
 </html>
