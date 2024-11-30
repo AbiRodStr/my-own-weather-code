@@ -51,28 +51,24 @@ header {
   font-size: 30px;
 }
 .weather-app-data {
+  font-size: 50px;
+  font-weight: bold;
   justify-content: space-between;
   padding: 10px;
-  display: inline-flex;
+  display: flex;
+  line-height: 45px;
 }
-
 .weather-app-city {
-  font-size: 50px;
   text-align: left;
 }
-
 .current-temperature {
-  justify-content: right;
+  justify-content: end;
   text-align: right;
   display: flex;
 }
 .emoji {
   font-size: 40px;
-}
-.temperature {
-  font-size: 50px;
-  font-weight: bold;
-  line-height: 50px;
+  padding: 0 10px 0 0;
 }
 
 .weather-app-details {
