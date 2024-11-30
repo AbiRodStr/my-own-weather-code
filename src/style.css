@@ -27,14 +27,14 @@ a {
   border: none;
   border-radius: 8px;
   background: #d5e8d5;
-  color: black;
+  color: #0a4e5a;
   font-weight: 700;
   font-size: 16px;
 }
 .search-form-submit {
-  width: 18%;
+  width: 28%;
   margin: 10px;
-  padding: 30px 30px 30px 50px;
+  padding: 30px;
   border: none;
   border-radius: 8px;
   background: #0a4e5a;
