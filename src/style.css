@@ -56,7 +56,7 @@ header {
   justify-content: space-between;
   padding: 10px;
   display: flex;
-  line-height: 45px;
+  line-height: 85px;
 }
 .weather-app-city {
   text-align: left;
@@ -67,8 +67,9 @@ header {
   display: flex;
 }
 .emoji {
-  font-size: 40px;
-  padding: 0 10px 0 0;
+  width: 80px;
+  height: 80px;
+  justify-content: top;
 }
 
 .weather-app-details {
