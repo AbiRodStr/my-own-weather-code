@@ -39,6 +39,26 @@ function formatDate(date) {
   return `${day} ${hours}:${minutes}`;
 }
 
+function displayForecast() {
+  let days = ["Tue", "Wed", "Thurs", "Fri", "Sat"];
+  let forecastHtml = "";
+
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `<div class ="weather-forecast-day">
+<div class ="weather-forecast-date">${day}</div>
+<div class ="weather-forecast-icon">⛅</div>
+<div class ="weather-forecast-temperatures">
+  <div class ="weather-forecast-temperature"><strong>15º</strong></div> 
+<div class ="weather-forecast-temperature">9º</div>
+</div>
+</div>`;
+  });
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = forecastHtml;
+}
+
 function searchCity(city) {
   let apiKey = "2a9cba14de5ca8505328abf7tf796fof";
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
@@ -54,3 +74,4 @@ function handleSearchSubmit(event) {
 let searchFormElement = document.querySelector("#searchForm");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 searchCity("Madrid");
+displayForecast();
