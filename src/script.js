@@ -18,6 +18,7 @@ function refreshWeather(response) {
   windSpeedElement.innerHTML = `${response.data.wind.speed}`;
   timeElement.innerHTML = formatDate(date);
   console.log(response.data);
+  getForecast(response.data.city);
 }
 function formatDate(date) {
   let minutes = date.getMinutes();
@@ -38,8 +39,12 @@ function formatDate(date) {
   }
   return `${day} ${hours}:${minutes}`;
 }
-
-function displayForecast() {
+function getForecast(city) {
+  let apiKey = "2a9cba14de5ca8505328abf7tf796fof";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}`;
+  axios(apiUrl).then(displayForecast);
+}
+function displayForecast(response) {
   let days = ["Tue", "Wed", "Thurs", "Fri", "Sat"];
   let forecastHtml = "";
 
@@ -74,4 +79,3 @@ function handleSearchSubmit(event) {
 let searchFormElement = document.querySelector("#searchForm");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 searchCity("Madrid");
-displayForecast();
